@@ -305,7 +305,7 @@ class GameBoard extends React.Component {
 				class: 'game'}, 
 				gameBoard,
 				e('div', {class: 'numpad'}, numberPad),
-				e('button', {class: 'solveButton', onClick: () => {if (this.state.solution != null){ this.setState({logicBoard: this.state.solution}); this.stopTime();}}}, "Solve"),
+				e('button', {class: 'solveButton', onClick: () => {if (this.state.solution != null){ this.resetBoard(); this.setState({logicBoard: this.state.solution.slice()}); this.stopTime();}}}, "Solve"),
 				e('button', {class: 'resetButton', onClick: () => {this.resetBoard()}}, "Reset"),
 				e('button', {class: 'hintButton', onClick: () => {this.getHint()}}, "Hint"),
 				e('button', {
