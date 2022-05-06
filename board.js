@@ -74,7 +74,7 @@ class NumberButton extends React.Component {
 class GameBoard extends React.Component {
   constructor(props) {
     super(props);
-	this.state = {selectedNumber: '', color: 'White', logicBoard: new Array(81).fill(''), numberPadProperties: new Array(9).fill(''), milliseconds: 0, timerIntervalID: null, solution: new Array()};
+	this.state = {selectedNumber: '', color: 'White', logicBoard: new Array(81).fill(''), numberPadProperties: new Array(9).fill(''), milliseconds: 0, timerIntervalID: null, solution: null};
 	const square = {number: '', rowConflict: false, columnConflict: false, squareConflict: false, locked: false, flashHint: false};
 	const number = {isClicked : false};
 	for (let i = 0; i < this.state.logicBoard.length; i++){
@@ -305,7 +305,7 @@ class GameBoard extends React.Component {
 				class: 'game'}, 
 				gameBoard,
 				e('div', {class: 'numpad'}, numberPad),
-				e('button', {class: 'solveButton', onClick: () => {this.solveSudoku(); this.stopTime();}}, "Solve"),
+				e('button', {class: 'solveButton', onClick: () => {if (this.state.solution != null){ this.setState({logicBoard: this.state.solution}); this.stopTime();}}}, "Solve"),
 				e('button', {class: 'resetButton', onClick: () => {this.resetBoard()}}, "Reset"),
 				e('button', {class: 'hintButton', onClick: () => {this.getHint()}}, "Hint"),
 				e('button', {
