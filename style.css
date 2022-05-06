@@ -1,0 +1,191 @@
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border: 3px solid MidnightBlue;
+}
+
+.square-container {
+  display: flex;
+  flex-basis: calc(33.332%);
+  flex-wrap: wrap;
+  border: 3px solid MidnightBlue;
+  box-sizing: border-box;
+}
+
+.square {
+  position: relative;
+  flex-basis: calc(33.332%);
+  border: 1px solid LightSkyBlue;
+  box-sizing: border-box;
+  transition: background-color 0.5s;
+  
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;  
+}
+
+.square::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.square .content {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.numbers {
+  position: relative;
+  flex-basis: calc(33.332%);
+  flex-wrap: wrap;
+  border: 1px solid;
+  box-sizing: border-box;
+  width: 150px;
+  height: 75px;
+  box-sizing: border-box;
+  background-color: AliceBlue;
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold; 
+}
+
+.numpad {
+
+  display: flex;
+  border: 4px solid;
+  flex-wrap: wrap;
+  flex-basis: calc(33.333%);
+  position: relative;
+  margin-left: 550px;
+  margin-top: -230px;
+  box-sizing: border-box;
+
+}
+
+.generateSudoku {
+  flex: 0 0 auto;
+  border: 4px solid #dda0dd;
+
+  position: relative;
+  width: calc(30%);
+  height: 80px;
+  background-color: #ebc7eb;
+  margin-top: -500px;
+  margin-left: 555px;
+  margin-bottom: auto;
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;  
+}
+
+.generateSudoku:hover {
+  background-color: #c256c2;
+}
+
+.timer {
+  flex: 0 0 auto;
+  border: 4px solid Indigo;
+
+  position: relative;
+  width: calc(30%);
+  height: 50px;
+  background-color: Lavender;
+  margin-top: -300px;
+  margin-left: 550px;
+  margin-bottom: auto;
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;  
+}
+
+.solveButton {
+  flex: 0 0 auto;
+  border: 4px solid #59b300;
+
+  position: relative;
+  width: calc(15%);
+  height: 50px;
+  background-color: #66cc00;
+  margin-top: -410px;
+  margin-left: 633px;
+  margin-bottom: auto;
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;  
+}
+
+.solveButton:hover{
+	background-color: #009933;
+}
+
+.resetButton {
+  flex: 0 0 auto;
+  border: 4px solid #ff4733;
+
+  position: relative;
+  width: calc(15%);
+  height: 50px;
+  background-color: #ff5e4d;
+  margin-top: -410px;
+  margin-left: 550px;
+  margin-bottom: auto;
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;  
+}
+
+.resetButton:hover{
+	background-color: #ff0000;
+}
+
+.hintButton {
+  flex: 0 0 auto;
+  border: 4px solid #ffff66;
+
+  position: relative;
+  width: calc(30% + 8px);
+  height: 50px;
+  background-color: #ffff80;
+  margin-top: -355px;
+  margin-left: 550px;
+  margin-bottom: auto;
+  
+  display: flex;               
+  justify-content: center;     
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;  
+}
+
+.hintButton:hover{
+	background-color: #ffff1a;
+}
+
+
+button {
+	display: flex;
+}
+
